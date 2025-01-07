@@ -53,7 +53,3 @@ variable "nat_gateway_name" {
 variable "eip_name" {
   type = string
 }
-
-variable "private_route_table_cidr_block" {
-  type = string
-}
