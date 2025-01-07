@@ -1,15 +1,13 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Checkout git repo') {
             steps {
-                script {
                 git branch: 'main', 
                     url: 'https://github.com/deshmukh-lokesh/aws-terraform.git', 
                     credentialsId: 'aws-credentials'
             }
-        }
         }
 
         stage('Check terraform version') {
@@ -24,7 +22,7 @@ pipeline {
             }
         }
 
-        stage('Validate terraorm code') {
+        stage('Validate terraform code') {
             steps {
                 sh 'terraform validate'
             }
@@ -39,6 +37,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 sh 'terraform plan'
+            }
         }
 
         stage('Terraform Apply') {
@@ -57,5 +56,4 @@ pipeline {
             echo 'Pipeline failed. Check the logs for details.'
         }
     }
-}
 }
