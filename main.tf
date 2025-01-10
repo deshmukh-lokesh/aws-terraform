@@ -1,6 +1,6 @@
 # VPC
 resource "aws_vpc" "vpc" {
-  cidr_block       = var.cidr_block
+  cidr_block = var.cidr_block
 
   tags = {
     Name = var.vpc_name
@@ -70,7 +70,7 @@ resource "aws_nat_gateway" "nat" {
   tags = {
     Name = var.nat_gateway_name
   }
-  
+
   depends_on = [aws_internet_gateway.igw]
 }
 

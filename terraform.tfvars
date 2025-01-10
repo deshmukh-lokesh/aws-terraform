@@ -12,9 +12,9 @@ private_subnet_cidr_block = "10.0.2.0/24"
 
 private_subnet_name = "private-subnet"
 
-public_route_table_cidr_block= "0.0.0.0/0"
+public_route_table_cidr_block = "0.0.0.0/0"
 
-public_route_table_name= "public-route-table"
+public_route_table_name = "public-route-table"
 
 internet_gateway_name = "internet-gateway"
 
