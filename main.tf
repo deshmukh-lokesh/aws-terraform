@@ -71,7 +71,7 @@ resource "aws_nat_gateway" "nat" {
     Name = var.nat_gateway_name
   }
   
-  depends_on = [aws_internet_gateway.example]
+  depends_on = [aws_internet_gateway.igw]
 }
 
 # Elastic IP
