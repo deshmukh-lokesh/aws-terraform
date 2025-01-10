@@ -40,7 +40,8 @@ pipeline {
                         usernameVariable: 'AWS_ACCESS_KEY_ID',
                         passwordVariable: 'AWS_SECRET_ACCESS_KEY'
                     )]) {
-                sh 'terraform plan'
+                        sh 'terraform plan'
+                }
             }
         }
 
@@ -60,5 +61,4 @@ pipeline {
             echo 'Pipeline failed. Check the logs for details.'
         }
     }
-}
 }
